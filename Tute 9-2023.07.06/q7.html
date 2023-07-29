@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Cal</title>
+  </head>
+  <body>
+    <button onclick="cal()">Perform Calculations</button>
+
+    <script>
+      function cal() {
+        var num1 = parseFloat(prompt("Enter the first number: "));
+        var num2 = parseFloat(prompt("Enter the second number: "));
+          var addition = num1 + num2;
+          var subtraction = num1 - num2;
+          var multiplication = num1 * num2;
+          var division = num1 / num2;
+
+          alert(
+            `Addition: ${addition} \nSubtraction: ${subtraction}\nMultiplication: ${multiplication}\nDivision: ${division}`
+          );
+       
+      }
+    </script>
+  </body>
+</html>
