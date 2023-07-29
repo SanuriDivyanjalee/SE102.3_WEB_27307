@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <button onclick="yob()">Get Year of Birth</button>
+
+    <script>
+      function yob() {
+        const nic = prompt("Input the student's NIC number:");
+
+        if (nic.length === 12 && nic.match(/^\d+$/) !== null) {
+          const birthYear = nic.substring(0, 4);
+
+          alert(`Year of Birth is: ${birthYear}`);
+        } else {
+          alert(
+            "Invalid NIC number! Please enter a valid 12-digit NIC number."
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

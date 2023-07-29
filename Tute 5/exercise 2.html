@@ -1,0 +1,245 @@
+<html>
+  <head>
+      <style>
+      body {
+        background-position: center;
+      }
+
+      .container {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        background:black;
+      }
+      table th {
+          
+        color:white;
+        background: orange;
+      }
+      table th,
+      table td {
+        padding: 12px;
+        margin: 5px;
+      }
+      table td label {
+        color:yellow;
+      }
+      table .bottom {
+        background: orange;
+      }
+      table tr td input[type="submit"] {
+        background: green;
+        border: none;
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+      }
+      table tr td input[type="reset"] {
+        padding: 15px;
+        color: white;
+        background: red;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body background="mountain.jpg">
+    <div class="container">
+      <form onsubmit="return validation()">
+        <table>
+          <tr>
+            <th colspan="3">Sign up</th>
+          </tr>
+          <tr>
+            <td><label for="ownerName">First Name</label></td>
+            <td>
+              <input
+                type="text"
+                id="ownerName"
+                name="ownerName"
+                placeholder="Enter First Name"
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="email">Last Name</label></td>
+            <td>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter Last Name"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="phoneNumber">Date of Birth</label></td>
+            <td>
+              <select id="day" name="day" required>
+                <option value="">Date</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                   <option value="5">5</option>
+              </select>
+              <select id="month" name="month" required>
+                <option value="">Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                   <option value="April">April</option>
+              </select>
+              <select id="year" name="year" required>
+                <option value="">Year</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label>Gender</label></td>
+            <td>
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+                required
+              /><label for="male">Male</label>
+              <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="female"
+                required
+              /><label for="female">Female</label><br />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="country">Country</label></td>
+            <td>
+              <select id="country" name="country" required>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="india">India</option>
+                  <option value="China">China</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="emailInput">Email</label></td>
+            <td>
+              <input
+                type="email"
+                id="emailInput"
+                name="emailInput"
+                placeholder="Enter Email"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="phoneNumberInput">Phone</label></td>
+            <td>
+              <input
+                type="text"
+                id="phoneNumberInput"
+                name="phoneNumberInput"
+                placeholder="Enter Phone"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="passwordInput">Password</label></td>
+            <td>
+              <input
+                type="password"
+                id="passwordInput"
+                name="passwordInput"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="confirmPasswordInput">Confirm Password</label></td>
+            <td>
+              <input
+                type="password"
+                id="confirmPasswordInput"
+                name="confirmPasswordInput"
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              <input type="checkbox" id="termsCheckbox" value="text" required />
+              <label for="termsCheckbox">I agree to the Terms of use</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="bottom" colspan="2">
+              <input type="submit" name="Submit">
+              <input type="reset" name="Cancel" value="Cancel">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <script>
+      function validation() {
+        // q1-Check input boxes
+        const inputs = document.getElementsByTagName("input");
+        for (const input of inputs) {
+          if (input.type !== "checkbox" && input.value.trim() === "") {
+            alert("Error: Input is empty!");
+            return false;
+          }
+        }
+
+        //q2- Validate Email address
+        const emailInput = document.getElementById("emailInput").value;
+        if (!emailInput.includes("@") || !emailInput.includes(".")) {
+          alert("Error: Invalid Email address!");
+          return false;
+        }
+
+        //q3- Validate Phone number
+        const phoneNumberInput =
+          document.getElementById("phoneNumberInput").value;
+        if (!/^\d{10}$/.test(phoneNumberInput)) {
+          alert(
+            "Error: Invalid Phone number! Phone number should be 10 digits."
+          );
+          return false;
+        }
+
+        //q4-Validate password confirmation 
+        const passwordInput = document.getElementById("passwordInput").value;
+        const confirmPasswordInput = document.getElementById(
+          "confirmPasswordInput"
+        ).value;
+        if (passwordInput !== confirmPasswordInput) {
+          alert("Error: Password and Confirm Password do not match!");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+    <head><title>car_reg</title></head>
+<body>
+    <fieldset><legend>Car Registration</legend>
+        <table>
+   <form name="A" method="post" action="new.php">
+    <tr><td>Owner Name</td>
+        <td> <input type="text" name="un" placeholder="Owner Name"></td> </tr>
+       <tr>
+       <td>Email</td>
+       <td> <input type="text" name="em" placeholder="Email"></td>
+        </tr>
+ <tr>
+       <td> Phone<br> number</td>
+       <td><input type="text" name="pn" placeholder="Phone number"></td>
+       
+       </tr>
+       <tr>
+       <td>  Country     </td>
+       <td><select name="country">
+       <option value="s">Srilanka</option>
+           <option value="i">India</option>
+       <option value="a">Africa</option>
+     </select></td>
+       
+       </tr>
+     <tr>
+       <td>  Car Model</td>
+       <td>   <input type="text" name="cm" placeholder="Car model"></td>
+       
+       </tr>   
+    
+      <tr>
+       <td>Manufacture<br> Year</td>
+       <td><select name="manufacture year">
+       <option value="s">Select Year</option>
+           <option value="p">2020</option>
+       <option value="q">2021</option>
+      
+       </select></td></tr>
+       <tr>
+       <td> Transmission</td>
+       <td><input type="radio" name="t" value="m">Manual
+       <input type="radio" name="t" value="a">Auto<br></td>
+       </tr>
+      <tr>
+       <td>Other</td>
+       <td><textarea id="other" name="other" rows="4" cols="50"></textarea></td></tr>
+       <tr>
+       <td>   <input type="checkbox" name="termsandconditions" value="1">I agree to the terms and conditions   </td>
+       
+       </tr>
+        
+        <tr>
+       <td><input type="submit" name="log" value="Submit"></td>
+       <td> <input type="reset" name="res" value="Reset"></td>
+       </tr>
+   
+       
+    </form>
+        </table>
+        </fieldset>
+     </body>
+</html>

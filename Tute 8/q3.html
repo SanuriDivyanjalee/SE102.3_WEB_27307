@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <button onmouseover="changebgColor('red')" onmouseout="previousbgColor('red')">
+      Red
+    </button>
+      <br>
+    <button onmouseover="changebgColor('green')" onmouseout="previousbgColor('green')">
+
+      Green
+    </button>
+      <br>
+    <button onmouseover="changebgColor('blue')" onmouseout="previousbgColor('blue')">
+      Blue
+    </button>
+
+    <script>
+      function changebgColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+
+      function previousbgColor(color) {
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+  </body>
+</html>

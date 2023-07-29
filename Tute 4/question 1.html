@@ -1,0 +1,73 @@
+<html>
+    <head><title>Registration Form</title></head>
+<body>
+ 
+    <center>
+   <form method="post" action="submit.php">
+    <table>
+        <tr>
+        <th><h1>Registration Form</h1></th>
+        </tr>
+        <tr>
+        <td><label for="firstname"> First Name</label></td>
+            <td ><input type="text" id="firstname" name="firstname" required></td>
+        </tr>
+        <tr>
+        <td><label for="lastname">Last Name </label></td>
+        <td><input type="text" id="lastname" name="lastname" required> </td>
+        </tr>
+        <tr>
+        <td><label for="mobilenumber"> Mobile Number </label> </td>
+        <td><input type="text" id="mobilenumber" name="mobilenumber" required></td>
+        
+        </tr>
+        <tr>
+        <td><label for="gender">Gender</label> </td>
+        <td> <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+    
+        <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            </td>
+        </tr>
+   <tr>
+     <td><label for="email">Email </label></td>   
+        <td><input type="text" id="email" name="email" required></td>
+        </tr>
+     
+      <tr>
+        
+         <td><label for="favouritemusic">Favourite Music </label></td>  
+        <td> <input type="checkbox" id="pop" value="pop" name="favouritemusic">
+          <label for="pop">POP </label>
+          <input type="checkbox" id="rock" value="rock" name="favouritemusic">
+          <label for="rock">Rock </label>
+            <input type="checkbox" id="other" value="other" name="favouritemusic">
+          <label for="other">Other</label>
+          
+          </td>
+        </tr>
+        
+        <tr>
+        <td><label for="additionaldetails"> Additional Details</label></td> 
+            <td><textarea id="additionaldetails" name="additionaldetails" rows="4" cols="50"></textarea></td>
+        </tr>
+        <tr>
+        
+        <td>
+             <input type="checkbox" id="termsandconditions"  name="termsandconditions" required>
+              <label for="termsandconditions">I agree to the terms and conditions</label>
+            </td>
+        </tr>
+        
+      
+       <br>
+       <td>
+           <input type="submit" value="Submit"></td>
+        <td><input type="reset" value="Reset"></td>
+        </table>
+        </form>
+        
+    </center>
+     </body>
+</html>
